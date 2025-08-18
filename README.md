@@ -24,7 +24,7 @@ I chose this game because it’s a great way to practice core programming concep
 - After 10 incorrect guesses, the game ends and reveals the correct number.
 
 ### Planning Materials
-[View my pseudocode and planning notes](link-to-your-planning-docs-or-GitHub-wiki)
+[View my pseudocode and planning notes](https://github.com/KieshaWalker/Guessing-Game/blob/main/js/app.js)
 
 ---
 
