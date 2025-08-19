@@ -59,3 +59,54 @@ Re-enable input and button
 
 */
 
+let feedbackMessage = '';
+
+const maxGuesses = 10;
+let attempts = 0;
+
+const randomNumber = Math.floor(Math.random() * 100) + 1;
+
+
+function disableGame() {
+    document.getElementById('user-input').disabled = true;
+    document.getElementById('submit-btn').disabled = true;
+}
+let remainingGuesses = maxGuesses - attempts;
+
+let render = (remainingGuesses) => {
+    document.getElementById('remaining-guesses').innerText = remainingGuesses;
+}
+
+const userInput = document.getElementById('submit-btn').addEventListener('click', handleGuess);
+console.log(`Random number to guess: ${randomNumber}`);
+
+function handleGuess() {
+    const guessInput = document.getElementById('user-input').value;
+    attempts++;
+    remainingGuesses = maxGuesses - attempts;
+    console.log(`Number of attempts: ${attempts}`);
+    console.log(`User guessed: ${guessInput}`);
+
+    render(remainingGuesses)
+
+    if (guessInput == randomNumber) {
+        feedbackMessage = "You guessed it!";
+        document.getElementById('feedback').innerText = feedbackMessage;
+        disableGame();
+
+    } else if (guessInput > randomNumber) {
+        feedbackMessage = "Too high!";
+        document.getElementById('feedback').innerText = feedbackMessage;
+    } else {
+        feedbackMessage = "Too low!";
+        document.getElementById('feedback').innerText = feedbackMessage;
+    }
+
+    if (attempts >= maxGuesses) {
+        feedbackMessage = `Game over. The number was ${randomNumber}`;
+        document.getElementById('feedback').innerText = feedbackMessage;
+        disableGame();
+    }
+}
+
+
