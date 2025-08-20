@@ -43,3 +43,10 @@ h2 {
     text-align: center;
     padding: 0px;
 }
+
+#game-over {
+    grid-column: span 2;
+    text-align: center;
+    padding: 0px;
+    visibility: hidden;
+}

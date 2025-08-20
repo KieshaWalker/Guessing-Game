@@ -64,8 +64,9 @@ let feedbackMessage = '';
 const maxGuesses = 10;
 let attempts = 0;
 
-const randomNumber = Math.floor(Math.random() * 100) + 1;
+let randomNumber = Math.floor(Math.random() * 100) + 1;
 
+document.getElementById('restart-btn').addEventListener('click', restartGame);
 
 function disableGame() {
     document.getElementById('user-input').disabled = true;
@@ -76,6 +77,8 @@ let remainingGuesses = maxGuesses - attempts;
 let render = (remainingGuesses) => {
     document.getElementById('remaining-guesses').innerText = remainingGuesses;
 }
+
+
 
 const userInput = document.getElementById('submit-btn').addEventListener('click', handleGuess);
 console.log(`Random number to guess: ${randomNumber}`);
@@ -90,7 +93,7 @@ function handleGuess() {
     render(remainingGuesses)
 
     if (guessInput == randomNumber) {
-        feedbackMessage = "You guessed it!";
+        feedbackMessage = "WOAHHHHHH, You guessed it!";
         document.getElementById('feedback').innerText = feedbackMessage;
         disableGame();
 
@@ -109,4 +112,24 @@ function handleGuess() {
     }
 }
 
+let resetGame = () => {
+    if (disableGame === true) { 
+        document.querySelector('#game-over').classList.remove('hidden');
+    }
+    
+}
 
+function restartGame() {
+    resetGame();
+    attempts = 0;
+    remainingGuesses = maxGuesses;
+    randomNumber = Math.floor(Math.random() * 100) + 1;
+    render(remainingGuesses);
+
+    document.getElementById('user-input').disabled = false;
+    document.getElementById('submit-btn').disabled = false;
+    document.getElementById('user-input').value = '';
+    document.getElementById('feedback').innerText = '';
+    document.getElementById('game-over').style.display = 'none';
+}
+restartGame();
