@@ -98,6 +98,7 @@ function handleGuess() {
         feedbackMessage = "WOAHHHHHH, You guessed it!";
         document.getElementById('feedback').innerText = feedbackMessage;
         disableGame();
+        resetGameWon();
 
     } else if (guessInput > randomNumber) {
         feedbackMessage = "Too high!";
@@ -120,6 +121,21 @@ function resetGame() {
         const gameOverMessage = document.getElementById('game-over-message');
         const restartButton = document.getElementById('restart-btn');
         feedbackMessage = 'Try Again?';
+        gameOverMessage.innerText = feedbackMessage;
+        gameOverContainer.style.display = 'flex';
+        restartButton.style.display = 'flex';
+    }
+ 
+}
+
+function resetGameWon() {
+    const guessInput = Number(document.getElementById('user-input').value);
+
+    if (gameDisabled && guessInput === randomNumber) {
+        const gameOverContainer = document.getElementById('game-over');
+        const gameOverMessage = document.getElementById('game-over-message');
+        const restartButton = document.getElementById('restart-btn');
+        feedbackMessage = 'GREAT JOB!! Play again?';
         gameOverMessage.innerText = feedbackMessage;
         gameOverContainer.style.display = 'flex';
         restartButton.style.display = 'flex';
