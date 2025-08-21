@@ -106,7 +106,6 @@ function handleGuess() {
         feedbackMessage = "Too low!";
         document.getElementById('feedback').innerText = feedbackMessage;
     }
-
     if (attempts >= maxGuesses) {
         feedbackMessage = `Game over. The number was ${randomNumber}`;
         document.getElementById('feedback').innerText = feedbackMessage;
@@ -125,7 +124,6 @@ function resetGame() {
         gameOverContainer.style.display = 'flex';
         restartButton.style.display = 'flex';
         console.log(`Resetting game. New random number: ${randomNumber}`);
-
     }
 }
 resetGame();
