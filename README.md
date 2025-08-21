@@ -13,9 +13,6 @@ I chose this game because it’s a great way to practice core programming concep
 ---
 
 
-### Play the Game
-[Click here to play the deployed game](https://your-deployment-link.com)
-
 ### How to Play
 - Enter a number between 1 and 100.
 - Click "Submit" to make a guess.
@@ -28,14 +25,14 @@ I chose this game because it’s a great way to practice core programming concep
 
 ---
 
-## 🙏 Attributions
+## Attributions
 - [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) – used to ensure accessible color contrast.
 - [Google Fonts](https://fonts.google.com/) – for custom typography.
 - [MDN Web Docs](https://developer.mozilla.org/) – for JavaScript reference and DOM methods.
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 - HTML5
 - CSS3 (Flexbox layout)
 - JavaScript (ES6+)
@@ -45,7 +42,7 @@ I chose this game because it’s a great way to practice core programming concep
 
 ---
 
-## 🌱 Next Steps (Stretch Goals)
+## Next Steps (Stretch Goals)
 - Add difficulty levels (Easy, Medium, Hard with different attempt limits)
 - Add animations for feedback messages
 
