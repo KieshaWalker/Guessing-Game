@@ -122,8 +122,8 @@ function resetGame() {
         const restartButton = document.getElementById('restart-btn');
         feedbackMessage = 'Try Again?';
         gameOverMessage.innerText = feedbackMessage;
-        gameOverContainer.style.display = 'block';
-        restartButton.style.display = 'block';
+        gameOverContainer.style.display = 'flex';
+        restartButton.style.display = 'flex';
         console.log(`Resetting game. New random number: ${randomNumber}`);
 
     }

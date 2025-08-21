@@ -38,25 +38,36 @@ h2 {
     height: 30px;
 }
 
+#submit-btn:hover {
+    background-color: #f39d1291;
+    color: white;
+    cursor: pointer;
+}
+
 #game {
     grid-column: span 2;
     text-align: center;
     padding: 0px;
+   
 }
 
 #game-over {
-    grid-column: span 2;
-    text-align: center;
-    padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  justify-content: center; 
+  height: 10vh;           
+  text-align: center;
 }
 
+
 #restart-btn {
- margin-top: 20px;
+    margin-top: 20px;
     padding: 10px 20px;
     font-size: 1.2rem;
     border: none;
     border-radius: 5px;
-    background-color: #f39c12;
+    background-color: #f39d1291;
     color: white;
     cursor: pointer;
 }
