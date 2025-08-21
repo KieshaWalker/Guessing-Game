@@ -8,7 +8,7 @@ I chose this game because it’s a great way to practice core programming concep
 ---
 
 ## Screenshot / Logo
-![Screenshot of Number Guessing Game](link-to-your-screenshot.png)
+![Screenshot of Guessing Game](./guessingGame.png)
 
 ---
 
